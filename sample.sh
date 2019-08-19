@@ -7,6 +7,7 @@ do
 
     # Where we want to copy our code.
     TARGET="/home/neat-app-deployed"
+    
 
     # Neat trick to get the branch name of the reference just pushed:
     BRANCH=$(git rev-parse --symbolic --abbrev-ref $ref)
