@@ -1,3 +1,5 @@
+#!/bin/bash
+
 while read oldrev newrev ref
 do
     # Location of our bare repository.
@@ -9,7 +11,7 @@ do
     # Neat trick to get the branch name of the reference just pushed:
     BRANCH=$(git rev-parse --symbolic --abbrev-ref $ref)
 
-    if [[ "$BRANCH" = "master" ]];
+    if [[ $BRANCH == "master" ]];
     then
         # Send a nice message to the machine pushing to this remote repository.
         echo "Push received! Deploying branch: ${BRANCH}..."
